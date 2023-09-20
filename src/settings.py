@@ -13,8 +13,8 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "Tree binary segmentation"
-PROJECT_NAME_FULL: str = "Tree binary segmentation"
+PROJECT_NAME: str = "Tree Binary Segmentation"
+PROJECT_NAME_FULL: str = "Tree Binary Segmentation"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
