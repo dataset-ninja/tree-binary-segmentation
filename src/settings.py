@@ -55,7 +55,7 @@ PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = "https://www.earthshot.eco/research/the-machine-learning-behind-the-biome-app"
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
-CITATION_URL: Optional[str] = "https://www.kaggle.com/datasets/earthshot/tree-binary-segmentation"
+CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = None
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Earthshot Labs"
