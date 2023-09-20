@@ -1,3 +1,3 @@
-# Tree binary segmentation
+# Tree Binary Segmentation
 
-Tree binary segmentation is a dataset for instance segmentation, semantic segmentation, and object detection tasks.
+Tree Binary Segmentation is a dataset for instance segmentation, semantic segmentation, and object detection tasks.
