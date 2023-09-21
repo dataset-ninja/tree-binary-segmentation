@@ -15,7 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "Tree Binary Segmentation"
 PROJECT_NAME_FULL: str = "Tree Binary Segmentation"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -43,7 +43,9 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/tree-binary-segmentation"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/earthshot/tree-binary-segmentation"
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://www.kaggle.com/datasets/earthshot/tree-binary-segmentation"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -52,7 +54,9 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
-BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = "https://www.earthshot.eco/research/the-machine-learning-behind-the-biome-app"
+BLOGPOST: Optional[
+    Union[str, List[str], Dict[str, str]]
+] = "https://www.earthshot.eco/research/the-machine-learning-behind-the-biome-app"
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = None
