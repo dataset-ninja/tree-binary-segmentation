@@ -1,4 +1,4 @@
-**Tree Binary Segmentation** is a dataset for a semantic segmentation task. It is used in the entertainment industry. 
+**Tree Binary Segmentation** is a dataset for a semantic segmentation task. It is used in the environmental industry. 
 
 The dataset consists of 2718 images with 2532 labeled objects belonging to 1 single class different classes (*tree*).
 
