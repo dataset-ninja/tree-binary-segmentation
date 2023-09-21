@@ -1,1 +1,1 @@
-License is unknown for the Tree binary segmentation dataset.
+License is unknown for the Tree Binary Segmentation dataset.
