@@ -85,15 +85,10 @@ def convert_and_upload_supervisely_project(
         mask_np = sly.imaging.image.read(mask_path)[:, :, 0]
         img_height = mask_np.shape[0]
         img_wight = mask_np.shape[1]
-        mask = mask_np == 255
-        ret, curr_mask = connectedComponents(mask.astype("uint8"), connectivity=8)
-        for i in range(1, ret):
-            obj_mask = curr_mask == i
-            curr_bitmap = sly.Bitmap(obj_mask)
-            if curr_bitmap.area > 30:
-                curr_label = sly.Label(curr_bitmap, obj_class)
-                labels.append(curr_label)
-
+        obj_mask = mask_np == 255
+        curr_bitmap = sly.Bitmap(obj_mask)
+        curr_label = sly.Label(curr_bitmap, obj_class)
+        labels.append(curr_label)
         return sly.Annotation(img_size=(img_height, img_wight), labels=labels)
 
 

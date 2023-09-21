@@ -24,8 +24,8 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Entertainment()]
 CATEGORY: Category = Category.Entertainment()
 
-CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
-ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
+CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.SemanticSegmentation()]
 
 RELEASE_DATE: Optional[str] = "2022-12-13"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
