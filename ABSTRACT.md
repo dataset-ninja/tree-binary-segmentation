@@ -8,25 +8,25 @@ One of the most noteworthy benefits of the Biome app is its speed. During a rece
 
 ![fig1](https://i.ibb.co/H7VfssH/63ca109aa8dd6ba1c8b671ba-Measuring-Thorny-Palm-p-800.webp)
 
-<i>This palm tree with large spikes is extremely difficult to measure with DBH tape.</i>
+<span style="font-size: smaller; font-style: italic;">This palm tree with large spikes is extremely difficult to measure with DBH tape.</span>
 
 ![fig2](https://i.ibb.co/f9JpnVK/63ca10866ca26489f6504630-Biome-Thorny-Palm-p-1080.webp)
 
-<i>Measuring this spikey palm tree with Biome is easy. The segmentation does a good job even with the irregular trunk.</i>
+<span style="font-size: smaller; font-style: italic;">Measuring this spikey palm tree with Biome is easy. The segmentation does a good job even with the irregular trunk.</span>
 
 Authors have two machine learning models that make this possible: a binary semantic segmentation model and a regression model.
 
-A binary semantic segmentation model is used to localize the trunk at a pixel level on the camera image, allowing us to determine the width of the trunk. Authors' segmentation model is robust enough to recognize all types of trees, even oddly shaped ones that are common in the dense jungle environments where carbon projects take place. Many trees have bent trunks, spiky trunks, and vines growing around them, so authors developed their AI model for a diverse selection of trees. 
+A binary semantic segmentation model is used to localize the trunk at a pixel level on the camera image, allowing us to determine the width of the trunk. The authors' segmentation model is robust enough to recognize all types of trees, even oddly shaped ones that are common in the dense jungle environments where carbon projects take place. Many trees have bent trunks, spiky trunks, and vines growing around them, so authors developed their AI model for a diverse selection of trees. 
 ‍
-In addition, authors model was specifically trained to avoid “false positives”. When the user takes a picture of a post, a bottle, or a lamp, it won’t be detected as a tree. The model also focuses on a single tree in the foreground. This is important for the measurement process which can be hindered by multiple trees being grouped together. 
+In addition, the authors' model was specifically trained to avoid “false positives”. When the user takes a picture of a post, a bottle, or a lamp, it won’t be detected as a tree. The model also focuses on a single tree in the foreground. This is important for the measurement process which can be hindered by multiple trees being grouped together. 
 
 ![fig3](https://i.ibb.co/pKMTZsQ/63ca1a9731df2fbdcded71a4-Biome-segmentation-wip-p-800.webp)
 
-<i>Authors training set includes "false positives", like this pole on a sidewalk.</i>
+<span style="font-size: smaller; font-style: italic;"> Author training set includes "false positives", like this pole on a sidewalk.</span>
 
 ![fig4](https://i.ibb.co/rvjxKRH/63ca107682c5ea808794a18c-Biome-Activeloop-p-800.webp)
 
-<i>Authors used Scale.ai for batch labeling, and then augmented the dataset for a result of 3030 pairs (img+mask). They store the datasets on [Activeloop](https://www.activeloop.ai/).</i>
+<span style="font-size: smaller; font-style: italic;">Authors used Scale.ai for batch labelling, and then augmented the dataset for a result of 3030 pairs (img+mask). They store the datasets on [Activeloop](https://www.activeloop.ai/).</span>
 
 Biome also uses a regression model trained to correlate the diameter of a tree with the pixel width of the segmentation mask as well as the distance of the phone’s camera to the tree trunk. Authors are able to calculate the distance easily using the Lidar sensor on the most recent iPhones. The average error of their model in their test set was 1.66cm. Their test set was created by measuring several trees’ DBH with a DBH tape. The authors made sure to have a wide range of diameters (5-140cm) in the set in order to test a range of widths.
 
@@ -36,4 +36,5 @@ This graph shows the differences between Biome calculated DBH values versus manu
 
 The error for very small and very large trees represents the operating range authors initially assumed when gathering data. To improve the model, they plan to gather data outside the 10-100 cm range. Of course, there are many useful applications for measuring trees outside of this range, for example: measuring small saplings in the first few years of growth.
 
-<i> Please note the discrepancy in the number of images in the example(3030) and in the dataset(2718).</i> 
+<i>Please note the discrepancy in the number of images in the example(3030) and in the dataset(2718).</i> 
+
